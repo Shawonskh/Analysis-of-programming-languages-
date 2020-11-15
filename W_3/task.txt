@@ -1,0 +1,6 @@
+Write a scanner / filter using flex that would extract and print useful information from the file bnff2014.html
+That useful information would be:
+Date
+Time
+Film name
+Length of film
