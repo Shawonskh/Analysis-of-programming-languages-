@@ -1,0 +1,18 @@
+%%
+
+prog	: 
+	| prog stmt
+	;
+
+stmt	: SELECT cols FROM ID ';'		{ printf("\nLine %d ok\n", yylineno); }
+	| error ';'				{ yyerrok; }
+	;
+
+cols	: col
+	| cols ',' col
+	;
+	
+col	: '*'	
+	| ID
+	;
+%%
